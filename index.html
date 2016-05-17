@@ -1,0 +1,394 @@
+﻿<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>گذری کوتاه بر Numpy</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="creator" content="Fatemeh Tarashi" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <title dir="rtl">گذری کوتاه بر Numpy </title>
+    
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon-144x144.png" />
+</head>
+
+
+<body>
+<div id="impress">
+    
+    <!--##### Main-->
+    <!--<div id="Cover" class="step slide cover" data-x="0" data-y="2300" data-scale="4" data-rotate-z="180" data-rotate-y="180" data-rotate-x="-180">-->
+    <div id="Cover" class="step slide cover" data-x="0" data-y="2300" data-scale="4">
+        <p class="subtitle"> </p>
+        <p><br /></p>
+        <p class="title" align="center" dir="rtl"><font color="gray">گذری کوتاه بر Numpy</font></p><br>
+        <p class="orange" align="center" align="right" dir="rtl"><font color="gray">(پایتون و ریاضی)</font><br /></p><br><br>
+
+        <div class="right" dir="rtl">
+        	<div class="bottom" >
+            	<p class="little" ><a href="https://ir.linkedin.com/in/fatemehtarashi"><font color="blue">فاطمه تراشی کاشانی (FatemehTarashi@)</a></font>
+            	</p>
+            	<p class="orange little"><font color="gray">
+                	سومین کنفرانس کشوری پایتون - اردیبهشت ۹۵
+            	</font></p>
+        	</div>
+        </div>
+        <div class="right">
+        </div>
+    </div>
+    
+    <!--##### history-->
+    <div id="Start" class="step slide main" data-x="-16000" data-y="3000" data-scale="1.444"><br>
+        <p class="center" align="right">تاریخچه</b><br />
+</p>           <p style="font-size: 30pt;" dir="rtl"><font size=+3> در سال ۱۹۹۵ گروه (matrix-sig) با هدف تعریف یک بسته آرایه محاسباتی برای پایتون شکل گرفت.</font></p><br>
+           <img  src="images/1.JPG" >
+           </div>
+    
+    <div id="History" class="step slide" data-x="-16000" data-y="1750" data-rotate="0" data-scale="1.444">
+        <p><ul class="center" dir="rtl"><font size=+3>
+                	<li align="right"> در ۱۹۹۵ به وسیله ی جیم هوگونین با کمک آدم‌های زیادی از جمله جیم فولتن  ، دیوید آشر کارگران ، پل دویوا و کنراد هینسن آرایه Numeric برای پایتون نوشته شد. 
+                        </li>
+                	<li align="right">در سال ۲۰۰۰، با افزایش تعداد ماژول ها  ، نیاز و علاقه به ایجاد یک محیط کامل برنامه نویسی علمی  ایجاد شد.
+                        </li>
+                	<li align="right">در سال ۲۰۰۱، تراویس اولیفانت ، اریک جونز و پئرا پترسون ماژول های خود را در یک بسته عالی علمی ادغام کردند و در نتیجه سای‌پای متولد شد.
+                        </li>
+                        <li align="right">بعدتر یک بسته جدید به نام  Numarray  به عنوان یک جایگزین قابل انعطاف برای Numeric نوشته شد.
+                        </li>
+                        <li align="right">در اوایل همان سال ۲۰۰۵، تراویس اولیفانت خواست جامعه اطراف بسته  Numarray و ویژگیهای Numeric را متحد کند. 
+                        </li>
+                        <li align="right">در نتیجه برای جلوگیری از نصب بسته بزرگ Scipy برای کسانی که فقط یک شی آرایه می‌خواستند به طور جدا ایجاد شد و Numpy نام گرفت و به عنوان نسخه ۱.۰ در سال ۲۰۰۶ منتشر شد.
+                        </li>
+        		</font></ul></p>
+    </div>
+    
+    <div id="Scipy" class="step slide" data-x="-16000" data-y="500" data-rotate="0" data-scale="1.444">
+                <p class="center" dir="rtl"><b>Scipy چیست؟</b><br>
+                <h5 align="right" dir="rtl"><font size=+3>Scipy به چند نهاد وابسته اما متمایز اشاره دارد:</font>
+                <div class="center" dir="rtl">
+            	<ul align="right"><font size=+3>
+                	<li>SciPy Stack، مجموعه ای از نرم افزار منبع باز برای محاسبات علمی در پایتون، و به ویژه مجموعه مشخصی از بسته های هسته ای است.
+</li>
+                	<li>جامعه کاربران و توسعه دهندگان مجموعه SciPy Stack
+</li>
+                	<li>چندین کنفرانس محاسبات علمی اختصاص یافته به پایتون SciPy، EuroSciPy  و  SciPy.in.
+</li>
+                        <li>کتابخانه سا‌ی‌پای، یکی از اجزا SciPy Stack</li>
+        		</font></ul>
+           <div><img  align="left" src="images/scipy.png"  height="200" width=auto></div>
+    </div></div>
+    
+    <div id="ScipyCore" class="step slide" data-x="-16000" data-y="-750" data-rotate="0" data-scale="1.444">
+    	<p class="subsubtitle"></p><br>
+        <p align="right" dir="rtl"><b>هسته SciPy:</b><br>
+        <div class="right" dir="rtl">
+            	<ul align="right"><font size=+2>
+                	<li>Python 
+                        </li> <img src="images/python.jpg"  height="75" width=auto>
+                	<li>Numpy 
+                        </li><img src="images/numpy.png"  height="75" width=auto>
+                	<li>The scipy library 
+                        </li> <img src="images/scipy_med.png"  height="75" width=auto>
+                	<li>Matplotib 
+                        </li> <img src="images/matplotlib.png"  height="75" width=auto>
+        		</font></ul>
+    </div>
+    <div class="left" dir="rtl">
+            	<ul align="right"><font size=+2>
+                	<li>Pandas 
+                        </li><img src="images/panda.jpg"  height="75" width=auto>
+                	<li>Sympy 
+                        </li><img src="images/sympy.png"  height="100" width=auto>
+                	<li>Ipython
+                        </li> <img src="images/ipython.png"  height="75" width=auto>
+                	<li>Nose   
+                        </li> <img src="images/nose.jpg"  height="100" width=auto>
+        		</font></ul>
+        		</font></ul>
+    </div>
+ 
+    </div>
+    
+    <div id="Numpy" class="step slide" data-x="-16000" data-y="-2000" data-rotate="0" data-scale="1.444">
+                <p class="center" align="right" dir="rtl"><b>Numpy چیست؟<br>
+                <div align="right" dir="rtl"><font size=+3>نام‌پای بسته اساسی برای محاسبات علمی با پایتون است که شامل :</font><br>
+            	<ul align="right"><font size=+3>
+                	<li>یک شی آرایه n-بعدی</li>
+                	<li>توابع <font dir="ltr">(broadcasting) sophisticated </font></li>
+                	<li>ابزاری برای یکپارچه سازی C/C++ و کد فرترن</li>
+                        <li>تبدیل فوریه گسسته، جبر خطی عمومی ، عملیات آماری اساسی ، اعداد و شبیه سازی تصادفی 
+و ... می‌باشد.</li>
+        		</b></font></ul>
+    </div>    
+    <div><img  align="left" src="images/numpy.svg"  height="200" width=auto></div>
+    </div>
+    
+    <div id="Ndarray" class="step slide" data-x="-16000" data-y="-3250" data-rotate="0" data-scale="1.444">
+                <p class="center" dir="rtl"><b>آرایه ای n-بعدی</b><br>
+                <p dir="rtl"><font size=+3>در هسته بسته نام‌پای‌ شی Ndarray قرار دارد.<br>چند ویژگی مهم آرایه نام‌پای‌:</font></p>
+                <br><div class="center" dir="rtl">
+            	<ul align="right"><font size=+3>
+                	<li>اندازه ثابت
+</li>
+                	<li>همگن
+</li>
+                	<li>سهولت بخشیدن ریاضیات پیشرفته و انواع دیگری ازعملیات ها را بر روی تعداد زیادی از داده.
+</li>
+                        <li>بسیاری از بسته های علمی و ریاضی در حال رشد مبتنی بر پایتون از آرایه نام‌پای استفاده می‌کنند.
+</li>
+                        <li>کلاس آرایه نام پای ndarray نامیده می‌شود. 
+</li>
+        		</font></ul>
+
+    </div>    </div>
+    
+
+     <!--##### Distro-->
+    <div id="NdarrayFeatures1" class="step slide" data-x="-13700" data-y="-3250"  data-rotate="0" data-scale="1.444"  >
+        <p dir="rtl">ویژگی‌های مهم ndarray </p>
+        <div class="left" >
+            <ul align="left"><font size=+3>
+                        <br><font color="blue"><li>ndarray.ndim </li></font>
+                        <li>ndarray.shape </li>
+                        <li>ndarray.size</li>
+                        <li>ndarray.dtype</li>
+                        <li>ndarray.itemsize</li>
+                        <li>ndarray.data</li>
+            </ul>
+        </div>
+        <div><br /><img class="left" src="images/a.png" height="400" width=auto></div>
+
+    </div>
+    
+    <div id="NdarrayFeatures2" class="step slide" data-x="-11400" data-y="-3250" data-rotate="0" data-scale="1.6"  >
+        <p dir="rtl">ویژگی‌های مهم ndarray </p>
+        <div class="left" >
+            <ul align="left"><font size=+3>
+                        <br><li>ndarray.ndim </li>
+                        <font color="blue"><li>ndarray.shape </li></font>
+                        <li>ndarray.size</li>
+                        <li>ndarray.dtype</li>
+                        <li>ndarray.itemsize</li>
+                        <li>ndarray.data</li>
+            </ul>
+        </div>
+        <div><br /><img class="left" src="images/b.png" height="400" width=auto></div>
+
+    </div>
+    
+    <div id="NdarrayFeatures3" class="step slide" data-x="-11400" data-y="-2000" data-rotate="0" data-scale="1.6"  >
+        <p dir="rtl">ویژگی‌های مهم ndarray </p>
+        <div class="left" >
+            <ul align="left"><font size=+3>
+                        <br><li>ndarray.ndim </li>
+                        <li>ndarray.shape </li>
+                        <font color="blue"><li>ndarray.size</li></font>
+                        <li>ndarray.dtype</li>
+                        <li>ndarray.itemsize</li>
+                        <li>ndarray.data</li>
+            </ul>
+        </div>
+        <div><br /><img class="left" src="images/c.png" height="400" width=auto></div>
+    </div>
+
+
+    
+    <div id="NdarrayFeatures5" class="step slide" data-x="-13700" data-y="-750"  data-rotate="0" data-scale="1.6"  >
+        <p dir="rtl">ویژگی‌های مهم ndarray </p>
+        <div class="left" >
+            <ul align="left"><font size=+3>
+                        <br><li>ndarray.ndim </li>
+                        <li>ndarray.shape </li>
+                        <li>ndarray.size</li>
+                        <font color="blue"><li>ndarray.dtype</li></font>
+                        <li>ndarray.itemsize</li>
+                        <li>ndarray.data</li>
+            </ul>
+        </div>
+        <div><br /><img class="left" src="images/d.png" height="400" width=auto></div>  
+    </div>
+
+    <div id="NdarrayFeatures6" class="step slide" data-x="-9100" data-y="-3250"  data-rotate="0" data-scale="1.6"  >
+        <p dir="rtl">ویژگی‌های مهم ndarray </p>
+        <div class="left" >
+            <ul align="left"><font size=+3>
+                        <br><li>ndarray.ndim </li>
+                        <li>ndarray.shape </li>
+                        <li>ndarray.size</li>
+                        <li>ndarray.dtype</li>
+                        <font color="blue"><li>ndarray.itemsize</li></font>
+                        <li>ndarray.data</li>
+            </ul>
+        </div>
+        <div><br /><img class="left" src="images/e.png" height="400" width=auto></div>  
+    </div>
+
+    <div id="NdarrayFeatures7" class="step slide" data-x="-9100" data-y="-2000"  data-rotate="0" data-scale="1.6"  >
+        <p dir="rtl">ویژگی‌های مهم ndarray </p>
+        <div class="left" >
+            <ul align="left"><font size=+3>
+                        <br><li>ndarray.ndim </li>
+                        <li>ndarray.shape </li>
+                        <li>ndarray.size</li>
+                        <li>ndarray.dtype</li></font>
+                        <font size=+3><li>ndarray.itemsize</li></font>
+                        <font color="blue"><font size=+3><li>ndarray.data</li></font></font>
+            </ul>
+        </div>
+        <div><br /><img class="left" src="images/g.png" height="400" width=auto></div> 
+    </div>
+
+    <div id="NdarrayFeatures8" class="step slide" data-x="-9100" data-y="-750"  data-rotate="0" data-scale="1.6"  >
+         <p dir="rtl">ویژگی‌های مهم ndarray </p>
+        <div class="left" >
+            <ul align="left"><font size=+3>
+                        <br><li>ndarray.ndim </li>
+                        <li>ndarray.shape </li>
+                        <li>ndarray.size</li>
+                        <li>ndarray.dtype</li></font>
+                        <font size=+3><li>ndarray.itemsize</li></font>
+                        <font size=+3><li>ndarray.data</li></font>
+            </ul>
+        </div>
+        <div><br /><img class="left" src="images/f.png" height="400" width=auto></div>  
+
+    </div>
+
+    <div id="help-lookfor" class="step slide" data-x="-6800" data-y="-750"  data-rotate="0" data-scale="1.6"  >
+            <h1 class="center-text" align="right">سه تابع مهم کمکی</h1>
+            <p class="center-text"> lookfor(what[, module, import_modules, ...])    </p>
+           <img align="left" src="images/11.png" height="400" width=auto>
+    </div>
+
+    <div id="help-info" class="step slide" data-x="-4500" data-y="-3250"  data-rotate="0" data-scale="1.6"  >
+  <h1 class="center-text" align="right">سه تابع مهم کمکی</h1>
+  <p class="center-text"> info([object, maxwidth, output, toplevel])        
+  </p>
+  <img src="images/22.png" height="135" width=auto>
+  <img align="left" src="images/33.png" height="300" width=auto>
+    </div>
+
+    <div id="help-source" class="step slide" data-x="-4500" data-y="-2000"  data-rotate="0" data-scale="1.6"  >
+  <h1 class="center-text" align="right">سه تابع مهم کمکی</h1>
+  <p class="center-text"> source(object[, output])         
+  </p>
+  <img align="left" src="images/44.png" height="400" width=auto>
+    </div>
+
+    <div id="DataType" class="step slide" data-x="-4500" data-y="-750"  data-rotate="0" data-scale="1.6"  >
+  <h1 class="center-text" align="right">انواع داده</h1><br>
+  <img align="left" src="images/000.png" height="500" width="800">                   
+    </div>
+
+    <div id="MakingArrays" class="step slide" data-x="-4500" data-y="500"  data-rotate="0" data-scale="1.6"  >
+         <h1 class="center-text" align="right">ساخت آرایه</h1><br>
+        <div class="center" dir="rtl">
+             <ul align="right"><font size=+3>
+                        <li>تبدیل از سایر ساختمان های پایتون (مانند lists،  tuples)
+</li>
+                        <li>اشیا درونی نام پای برای ساخت آرایه (مانند arange، ones، zeros و...)
+</li>
+                        <li>خواندن آرایه از دیسک یا از فرمتهای استاندارد یا سفارشی شده.
+</li>
+                        <li>ایجاد آرایه از بایت خام با استفاده از رشته ها و یا بافر
+</li>
+                        <li>استفاده از کتابخانه خاص توابع (مانند random)
+</li>
+            </font></ul>
+        </div>                        
+    </div>
+
+    <div id="MakingArraysExample" class="step slide" data-x="-4500" data-y="1750"  data-rotate="0" data-scale="1.6"  >
+  <img src="images/00.png" height="160" width="750">
+  <img  src="images/01.png" height="140" width="750">
+  <img  src="images/02.png" height="100" width="750">
+  <img  src="images/03.png" height="140" width="750">                           
+    </div>
+
+    <div id="Print-Array" class="step slide" data-x="-4500" data-y="3000"  data-rotate="0" data-scale="1.6"  >
+    <h1 class="center-text" align="right">نمایش آرایه</h1><br>
+  <img align="left" src="images/print.png" >                        
+    </div>
+
+    <div id="Solition" class="step slide" data-x="-6800" data-y="3000"  data-rotate="0" data-scale="1.6"  >
+  <h3 dir="rtl"> راه حل : numpy.set_printoptions</h3>
+  <font color="black"  size="+2"><b>numpy.set_printoptions(precision=None, threshold=None, edgeitems=None, linewidth=None, suppress=None, nanstr=None,
+ infstr=None, formatter=None)</b></font>
+      <ul align="left"><font size=+2>
+                	<li>precision : int, optional (default 8)</li>
+                        <li>edgeitems : int, optional (default 1000)</li>
+                        <li>linewidth : int, optional (default 3)</li>
+                        <li>suppress : bool, optional (default 75)</li>
+                        <li>nanstr : str, optional (default False)</li>
+                        <li>infstr : str, optional (default nan)</li>
+                        <li>formatter : dict of callables, optional (default inf)</li>
+
+        		</font></ul>                          
+    </div>
+
+    <div id="operator" class="step slide" data-x="-9100" data-y="3000"  data-rotate="0" data-scale="1.6"  >
+     <h1 class="center-text" align="right">عملگرهای محاسباتی</h1>
+     <img class="left" src="images/aa.png" height="500" width=auto>
+     <img class="right" src="images/bb.png" height="500" width=auto>                         
+    </div>
+
+    <div id="U-Functions" class="step slide" data-x="-16000" data-y="4500"  data-z="-100" data-rotate="180"  data-scale="1.6" data-z="-100" data-rotate-x="113" >
+  <h1 class="center-text" align="right">توابع جهانی</h1>
+  <h6 dir="rtl" align="right"><font  size="+3">نام‌پای توابع آشنایی مانند، سینوس، کسینوس  sin، exp و ... را تدارک دیده. </h6>
+  <img align="center" align="center" src="images/cc.png" height="400" width=auto>                       
+    </div>
+
+    <div id="Vector&Matrix" class="step slide" data-x="-13700"" data-y="4500"  data-z="-100" data-rotate="180"  data-scale="1.6" data-z="-100" data-rotate-x="113" >
+    <h1 class="center-text" align="right"> بردارها و ماتریس ها</h1>  
+<h1 class="center-text" ></h1>
+  <h6 align="right" dir="rtl"><font  size="+3">نام پای توابع زیادی برای انجام علمیات استاندارد روی بردارها و ماتریس‌ها فراهم می‌کند. </font></h6>
+  <img align="left" src="images/dd.png" >                       
+    </div>
+
+    <div id="statistics" class="step slide" data-x="-11400" data-y="4500"  data-z="-100" data-rotate="180"  data-scale="1.6" data-z="-100" data-rotate-x="113" >
+  <h1 class="center-text" align="right"> آمار</h1>
+  <p align="right" dir="rtl"><font  size="+3">همچنین نام‌پای توابعی برای محسابات آماری نیز فراهم میکند . (مانند میانگین، واریانس، ضریب همبستگی و... )</font></p>                       
+  <p align="right" dir="rtl"><font  size="+3">محاسبه میانه:</font></p>
+  <img align="left" src="images/ee.png" height="100" width=auto>
+   <p align="right" dir="rtl"><font  size="+3"><br><br>محاسبه ضریب همبستگی:</font></p>
+  <img align="left" src="images/ff.png" height="180" width=auto>
+    </div>
+
+    <div id="polynomial" class="step slide" data-x="-9100" data-y="4500"  data-z="-100" data-rotate="180"  data-scale="1.6" data-z="-100" data-rotate-x="113" >
+  <h2 align="right" dir="rtl"><span class="flip">چندجمله ای  ها</span></h2>
+  <p align="right" dir="rtl"><font  size="+3">نام‌پای متدهایی برای کار روی چندجمله ای ها نیز فراهم کرده است.</font></p> <br>
+   <p align="right" dir="rtl"><font  size="+3">می‌تواند ریشه های چند جمله ای را پیدا کند، مثلا داریم:</font></p>
+   <p align="center" dir="rtl"><img src="images/p-1.png"  height=auto width=auto></p>
+  <img align="left" src="images/gg.png" >                     
+    </div>
+
+    <div id="Q" class="step slide" data-x="-6800" data-y="4500"  data-z="-100" data-rotate="180"  data-scale="1.6" data-z="-100" data-rotate-x="113" >
+  <p align="right" dir="rtl"><font  size="+3">یافتن ضریب چندجمله ای با توجه به مجموعه ی ریشه :</font></p>
+  <img align="left" src="images/ii.png" ><br><br>
+  <p align="right" dir="rtl"><font  size="+3">ضرایب مربوطه را برمی‌گرداند یعنی چندجمله ای زیر چندجمله ای مورد نظر است.</font></p> 
+        <p align="center" dir="rtl"><img src="images/p-2.png"  height="60" width=auto></p>
+   <p align="center" dir="rtl"><font  size="+3"> و اما  </font></p> 
+        <p align="center" dir="rtl"><img src="images/p-3.png"  height=auto width="720"></p>            
+    </div>
+
+
+    <div id="thankyou" class="step slide"  data-x="-11400" data-y="-750" data-rotate="0" data-scale="1.6">
+      <br><br><br><img align="center" src="images/images.png" >              
+    </div>
+
+    <!--##### Overview-->
+    <div id="overview" class="step" data-x="-10100" data-y="0" data-scale="14">
+    </div>
+    
+
+</div>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+
+</html>
